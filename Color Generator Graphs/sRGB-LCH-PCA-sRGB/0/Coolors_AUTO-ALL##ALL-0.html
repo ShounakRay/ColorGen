@@ -1,0 +1,302 @@
+
+    <html>
+        <head>
+            <script type="text/javascript" src="/Users/Ray/Documents/Python/Glencoe/vis/dist/vis.js"></script>
+            <link href=/Users/Ray/Documents/Python/Glencoe/vis/dist/vis.css rel="stylesheet" type="text/css" />
+            <style type="text/css">
+                #mynetwork
+                {
+                    width: 100%;
+                    height: 90%;
+                    border: 3px solid lightgray;
+                }
+            </style>
+        </head>
+        <body>
+            <div id = "mynetwork"></div>
+            <h2 style = "text-align:center;font-family:Helvetica;font-size:1.5em; margin-bottom: 2px;">sRGB-LCH-PCA-sRGB Color Centroid Interaction; Top 0 Links</h2>
+            <div class='my-legend'>
+                <div class='legend-scale'>
+                    <ul class='legend-labels'>
+                        <li><span style='background:#3C3E6E;'></span>0</li>
+                        <li><span style='background:#D83D66;'></span>1</li>
+                        <li><span style='background:#2F5D9B;'></span>2</li>
+                        <li><span style='background:#6C5E46;'></span>3</li>
+                        <li><span style='background:#D25B88;'></span>4</li>
+                        <li><span style='background:#5B656C;'></span>5</li>
+                        <li><span style='background:#00B57F;'></span>6</li>
+                        <li><span style='background:#545C46;'></span>7</li>
+                        <li><span style='background:#866097;'></span>8</li>
+                        <li><span style='background:#365D25;'></span>9</li>
+                        <li><span style='background:#252F99;'></span>10</li>
+                        <li><span style='background:#00CCFF;'></span>11</li>
+                        <li><span style='background:#674E60;'></span>12</li>
+                        <li><span style='background:#FC009C;'></span>13</li>
+                        <li><span style='background:#92896B;'></span>14</li>
+                        
+                </ul>
+            </div>
+        </div>
+        <style type='text/css'>
+          .my-legend {
+            display: table;
+            margin: 0 auto;
+            margin-top: 0.5em;
+            }
+          .my-legend .legend-title {
+            text-align: left;
+            margin-bottom: 5px;
+            font-weight: bold;
+            font-size: 90%;
+            }
+          .my-legend .legend-scale ul {
+            margin: 0;
+            margin-bottom: 5px;
+            padding: 0;
+            float: left;
+            list-style: none;
+            }
+          .my-legend .legend-scale ul li {
+            font-size: 80%;
+            list-style: none;
+            line-height: 18px;
+            margin-bottom: 5px;
+            display: inline;
+            float: left;
+            margin-left: 1em;
+            }
+          .my-legend ul.legend-labels li span {
+            display: block;
+            float: left;
+            height: 16px;
+            width: 30px;
+            margin-right: 5px;
+            margin-left: 0;
+            border: 1px solid #999;
+            }
+          .my-legend .legend-source {
+            font-size: 70%;
+            color: #999;
+            clear: both;
+            }
+          .my-legend a {
+            color: #777;
+            }
+        </style>
+        
+            <script type="text/javascript">
+                var nodes = new vis.DataSet([
+                {"id": 0, "label": "0", "group": "0", "shape": "dot", color: {'border':'#3C3E6EF2', 'highlight':'#3C3E6EF2', 'hover':'#3C3E6EF2'}},
+                {"id": 1, "label": "1", "group": "1", "shape": "dot", color: {'border':'#D83D66F2', 'highlight':'#D83D66F2', 'hover':'#D83D66F2'}},
+                {"id": 2, "label": "2", "group": "2", "shape": "dot", color: {'border':'#2F5D9BF2', 'highlight':'#2F5D9BF2', 'hover':'#2F5D9BF2'}},
+                {"id": 3, "label": "3", "group": "3", "shape": "dot", color: {'border':'#6C5E46F2', 'highlight':'#6C5E46F2', 'hover':'#6C5E46F2'}},
+                {"id": 4, "label": "4", "group": "4", "shape": "dot", color: {'border':'#D25B88F2', 'highlight':'#D25B88F2', 'hover':'#D25B88F2'}},
+                {"id": 5, "label": "5", "group": "5", "shape": "dot", color: {'border':'#5B656CF2', 'highlight':'#5B656CF2', 'hover':'#5B656CF2'}},
+                {"id": 6, "label": "6", "group": "6", "shape": "dot", color: {'border':'#00B57FF2', 'highlight':'#00B57FF2', 'hover':'#00B57FF2'}},
+                {"id": 7, "label": "7", "group": "7", "shape": "dot", color: {'border':'#545C46F2', 'highlight':'#545C46F2', 'hover':'#545C46F2'}},
+                {"id": 8, "label": "8", "group": "8", "shape": "dot", color: {'border':'#866097F2', 'highlight':'#866097F2', 'hover':'#866097F2'}},
+                {"id": 9, "label": "9", "group": "9", "shape": "dot", color: {'border':'#365D25F2', 'highlight':'#365D25F2', 'hover':'#365D25F2'}},
+                {"id": 10, "label": "10", "group": "10", "shape": "dot", color: {'border':'#252F99F2', 'highlight':'#252F99F2', 'hover':'#252F99F2'}},
+                {"id": 11, "label": "11", "group": "11", "shape": "dot", color: {'border':'#00CCFFF2', 'highlight':'#00CCFFF2', 'hover':'#00CCFFF2'}},
+                {"id": 12, "label": "12", "group": "12", "shape": "dot", color: {'border':'#674E60F2', 'highlight':'#674E60F2', 'hover':'#674E60F2'}},
+                {"id": 13, "label": "13", "group": "13", "shape": "dot", color: {'border':'#FC009CF2', 'highlight':'#FC009CF2', 'hover':'#FC009CF2'}},
+                {"id": 14, "label": "14", "group": "14", "shape": "dot", color: {'border':'#92896BF2', 'highlight':'#92896BF2', 'hover':'#92896BF2'}}
+            ]);
+                var edges = new vis.DataSet([
+                {"from": 3, "to": 14, "value": 1, "color": {'inherit': 'both'}},
+                {"from": 8, "to": 12, "value": 1, "color": {'inherit': 'both'}},
+                {"from": 8, "to": 14, "value": 1, "color": {'inherit': 'both'}},
+                {"from": 4, "to": 12, "value": 1, "color": {'inherit': 'both'}},
+                {"from": 4, "to": 14, "value": 1, "color": {'inherit': 'both'}},
+                {"from": 1, "to": 10, "value": 1, "color": {'inherit': 'both'}},
+                {"from": 6, "to": 10, "value": 1, "color": {'inherit': 'both'}},
+                {"from": 10, "to": 13, "value": 1, "color": {'inherit': 'both'}},
+                {"from": 2, "to": 12, "value": 1, "color": {'inherit': 'both'}},
+                {"from": 2, "to": 4, "value": 1, "color": {'inherit': 'both'}},
+                {"from": 2, "to": 5, "value": 1, "color": {'inherit': 'both'}},
+                {"from": 7, "to": 10, "value": 1, "color": {'inherit': 'both'}},
+                {"from": 1, "to": 3, "value": 1, "color": {'inherit': 'both'}},
+                {"from": 13, "to": 14, "value": 1, "color": {'inherit': 'both'}},
+                {"from": 0, "to": 1, "value": 1, "color": {'inherit': 'both'}},
+                {"from": 6, "to": 9, "value": 1, "color": {'inherit': 'both'}},
+                {"from": 5, "to": 9, "value": 1, "color": {'inherit': 'both'}},
+                {"from": 9, "to": 13, "value": 1, "color": {'inherit': 'both'}},
+                {"from": 8, "to": 11, "value": 1, "color": {'inherit': 'both'}},
+                {"from": 5, "to": 12, "value": 1, "color": {'inherit': 'both'}},
+                {"from": 2, "to": 11, "value": 1, "color": {'inherit': 'both'}},
+                {"from": 4, "to": 9, "value": 1, "color": {'inherit': 'both'}},
+                {"from": 8, "to": 9, "value": 1, "color": {'inherit': 'both'}},
+                {"from": 3, "to": 4, "value": 2, "color": {'inherit': 'both'}},
+                {"from": 3, "to": 12, "value": 2, "color": {'inherit': 'both'}},
+                {"from": 10, "to": 10, "value": 2, "color": {'inherit': 'both'}},
+                {"from": 5, "to": 11, "value": 2, "color": {'inherit': 'both'}},
+                {"from": 5, "to": 10, "value": 2, "color": {'inherit': 'both'}},
+                {"from": 0, "to": 10, "value": 2, "color": {'inherit': 'both'}},
+                {"from": 1, "to": 2, "value": 2, "color": {'inherit': 'both'}},
+                {"from": 1, "to": 12, "value": 2, "color": {'inherit': 'both'}},
+                {"from": 12, "to": 12, "value": 2, "color": {'inherit': 'both'}},
+                {"from": 2, "to": 6, "value": 2, "color": {'inherit': 'both'}},
+                {"from": 12, "to": 13, "value": 2, "color": {'inherit': 'both'}},
+                {"from": 4, "to": 7, "value": 2, "color": {'inherit': 'both'}},
+                {"from": 7, "to": 11, "value": 2, "color": {'inherit': 'both'}},
+                {"from": 1, "to": 11, "value": 2, "color": {'inherit': 'both'}},
+                {"from": 9, "to": 9, "value": 2, "color": {'inherit': 'both'}},
+                {"from": 4, "to": 4, "value": 3, "color": {'inherit': 'both'}},
+                {"from": 0, "to": 4, "value": 3, "color": {'inherit': 'both'}},
+                {"from": 8, "to": 8, "value": 3, "color": {'inherit': 'both'}},
+                {"from": 0, "to": 14, "value": 3, "color": {'inherit': 'both'}},
+                {"from": 12, "to": 14, "value": 3, "color": {'inherit': 'both'}},
+                {"from": 7, "to": 8, "value": 3, "color": {'inherit': 'both'}},
+                {"from": 3, "to": 5, "value": 3, "color": {'inherit': 'both'}},
+                {"from": 3, "to": 6, "value": 3, "color": {'inherit': 'both'}},
+                {"from": 3, "to": 11, "value": 3, "color": {'inherit': 'both'}},
+                {"from": 6, "to": 11, "value": 3, "color": {'inherit': 'both'}},
+                {"from": 0, "to": 0, "value": 3, "color": {'inherit': 'both'}},
+                {"from": 13, "to": 13, "value": 3, "color": {'inherit': 'both'}},
+                {"from": 2, "to": 7, "value": 3, "color": {'inherit': 'both'}},
+                {"from": 7, "to": 7, "value": 3, "color": {'inherit': 'both'}},
+                {"from": 6, "to": 12, "value": 3, "color": {'inherit': 'both'}},
+                {"from": 11, "to": 11, "value": 3, "color": {'inherit': 'both'}},
+                {"from": 5, "to": 7, "value": 3, "color": {'inherit': 'both'}},
+                {"from": 1, "to": 9, "value": 3, "color": {'inherit': 'both'}},
+                {"from": 6, "to": 8, "value": 4, "color": {'inherit': 'both'}},
+                {"from": 0, "to": 6, "value": 4, "color": {'inherit': 'both'}},
+                {"from": 4, "to": 8, "value": 4, "color": {'inherit': 'both'}},
+                {"from": 1, "to": 4, "value": 4, "color": {'inherit': 'both'}},
+                {"from": 14, "to": 14, "value": 4, "color": {'inherit': 'both'}},
+                {"from": 3, "to": 7, "value": 4, "color": {'inherit': 'both'}},
+                {"from": 5, "to": 8, "value": 4, "color": {'inherit': 'both'}},
+                {"from": 2, "to": 3, "value": 4, "color": {'inherit': 'both'}},
+                {"from": 1, "to": 7, "value": 4, "color": {'inherit': 'both'}},
+                {"from": 7, "to": 12, "value": 4, "color": {'inherit': 'both'}},
+                {"from": 1, "to": 8, "value": 4, "color": {'inherit': 'both'}},
+                {"from": 0, "to": 8, "value": 5, "color": {'inherit': 'both'}},
+                {"from": 0, "to": 12, "value": 5, "color": {'inherit': 'both'}},
+                {"from": 6, "to": 6, "value": 5, "color": {'inherit': 'both'}},
+                {"from": 3, "to": 13, "value": 5, "color": {'inherit': 'both'}},
+                {"from": 7, "to": 13, "value": 5, "color": {'inherit': 'both'}},
+                {"from": 0, "to": 5, "value": 5, "color": {'inherit': 'both'}},
+                {"from": 4, "to": 5, "value": 6, "color": {'inherit': 'both'}},
+                {"from": 5, "to": 5, "value": 6, "color": {'inherit': 'both'}},
+                {"from": 4, "to": 6, "value": 6, "color": {'inherit': 'both'}},
+                {"from": 8, "to": 13, "value": 6, "color": {'inherit': 'both'}},
+                {"from": 0, "to": 3, "value": 6, "color": {'inherit': 'both'}},
+                {"from": 0, "to": 7, "value": 6, "color": {'inherit': 'both'}},
+                {"from": 1, "to": 1, "value": 6, "color": {'inherit': 'both'}},
+                {"from": 4, "to": 13, "value": 7, "color": {'inherit': 'both'}},
+                {"from": 0, "to": 13, "value": 7, "color": {'inherit': 'both'}},
+                {"from": 1, "to": 5, "value": 7, "color": {'inherit': 'both'}},
+                {"from": 3, "to": 8, "value": 7, "color": {'inherit': 'both'}},
+                {"from": 1, "to": 13, "value": 8, "color": {'inherit': 'both'}},
+                {"from": 6, "to": 7, "value": 8, "color": {'inherit': 'both'}},
+                {"from": 5, "to": 6, "value": 9, "color": {'inherit': 'both'}},
+                {"from": 5, "to": 13, "value": 10, "color": {'inherit': 'both'}},
+                {"from": 6, "to": 13, "value": 10, "color": {'inherit': 'both'}},
+                {"from": 1, "to": 6, "value": 10, "color": {'inherit': 'both'}},
+                {"from": 3, "to": 3, "value": 11, "color": {'inherit': 'both'}}
+            ]);
+                var container = document.getElementById('mynetwork');
+                var data = {
+                    nodes: nodes,
+                    edges: edges
+                };
+                var options = {
+                    groups: {
+									'0': {color: {background: "#3C3E6E"}, borderWidth: 1},
+									'1': {color: {background: "#D83D66"}, borderWidth: 1},
+									'2': {color: {background: "#2F5D9B"}, borderWidth: 1},
+									'3': {color: {background: "#6C5E46"}, borderWidth: 1},
+									'4': {color: {background: "#D25B88"}, borderWidth: 1},
+									'5': {color: {background: "#5B656C"}, borderWidth: 1},
+									'6': {color: {background: "#00B57F"}, borderWidth: 1},
+									'7': {color: {background: "#545C46"}, borderWidth: 1},
+									'8': {color: {background: "#866097"}, borderWidth: 1},
+									'9': {color: {background: "#365D25"}, borderWidth: 1},
+									'10': {color: {background: "#252F99"}, borderWidth: 1},
+									'11': {color: {background: "#00CCFF"}, borderWidth: 1},
+									'12': {color: {background: "#674E60"}, borderWidth: 1},
+									'13': {color: {background: "#FC009C"}, borderWidth: 1},
+									'14': {color: {background: "#92896B"}, borderWidth: 1}
+                },
+                    "physics": {
+                        "enabled": true,
+                        "barnesHut": {
+                            "theta": 0.5,
+                            "gravitationalConstant": -2000,
+                            "centralGravity": 0.3,
+                            "springLength": 95,
+                            "springConstant": 0.04,
+                            "damping": 0.09,
+                            "avoidOverlap": 0.1
+                        },
+                        "forceAtlas2Based": {
+                            "theta": 0.5,
+                            "gravitationalConstant": -50,
+                            "centralGravity": 0.020,
+                            "springConstant": 0.01,
+                            "springLength": 100,
+                            "damping": 0.4,
+                            "avoidOverlap": 0.1
+                        },
+                        "repulsion": {
+                            "centralGravity": 0.2,
+                            "springLength": 200,
+                            "springConstant": 0.05,
+                            "nodeDistance": 100,
+                            "damping": 0.09
+                        },
+                        "maxVelocity": 50,
+                        "minVelocity": 0.1,
+                        "solver": 'forceAtlas2Based',
+                        "stabilization": {
+                          "enabled": true,
+                          "iterations": 1000,
+                          "updateInterval": 100,
+                          "onlyDynamicEdges": false,
+                          "fit": true
+                        },
+                        "adaptiveTimestep": true
+                    },
+                    "manipulation": {
+                        "enabled": true,
+                        "initiallyActive":false,
+                        "addNode":true,
+                        "addEdge":true,
+                        "editNode":undefined,
+                        "editEdge":true
+                    },
+                    "interaction": {
+                        "dragNodes":true,
+                        "dragView": true,
+                        "hideEdgesOnDrag": false,
+                        "hideEdgesOnZoom": true,
+                        "hideNodesOnDrag": false,
+                        "hover": true,
+                        "hoverConnectedEdges": true,
+                        "multiselect": true,
+                        "navigationButtons": false,
+                        "selectable": true,
+                        "selectConnectedEdges": true,
+                        "tooltipDelay": 0,
+                        "zoomView": true
+                    },
+                    "layout": {
+                        "improvedLayout": true,
+                        "clusterThreshold":250
+                    }
+                };
+                var network = new vis.Network(container, data, options)
+
+                network.on("selectNode", function(params)
+                {
+                    if (params.nodes.length == 1)
+                    {
+                        if (network.isCluster(params.nodes[0]) == true)
+                        {
+                            network.openCluster(params.nodes[0]);
+                        }
+                    }
+                });
+            </script>
+        </body>
+    </html>
