@@ -1,3 +1,12 @@
+# @Author: Shounak Ray <Ray>
+# @Date:   19-Aug-2020 09:08:96:969  GMT-0600
+# @Email:  rijshouray@gmail.com
+# @Filename: extracontent.py
+# @Last modified by:   Ray
+# @Last modified time: 24-Feb-2021 01:02:99:995  GMT-0700
+# @License: [Private IP]
+
+
 # # page_object = requests.get(url)
 # #
 # # if(page_object.status_code == 200):
@@ -44,14 +53,19 @@
 #     # group_freq.append([k, inter_freq_dict])
 # inertia_cost = pd.DataFrame(inertia_cost)
 # inertia_cost.columns = ['K', 'Normalized Inertia (Cost)']
-# inertia_cost['Normalized Inertia (Cost)'] = inertia_cost['Normalized Inertia (Cost)'].apply(lambda x: x / max(inertia_cost['Normalized Inertia (Cost)']))
+# inertia_cost['Normalized Inertia (Cost)'] = inertia_cost['Normalized Inertia (Cost)'].apply(
+#     lambda x: x / max(inertia_cost['Normalized Inertia (Cost)']))
 # [inertia_cost[group_num].apply(lambda x: x / max(inertia_cost[group_num])) for group_num in range(2, 32)]
-# [inertia_cost.insert(len(inertia_cost.columns), 'Group ' + str(i), list(group_freq[i][1].values())) for i in range(len(group_freq))]
+# [inertia_cost.insert(len(inertia_cost.columns), 'Group ' + str(i), list(group_freq[i][1].values()))
+#  for i in range(len(group_freq))]
 # for group_num in range(2, 32):
 # curr_group = inertia_cost[inertia_cost.columns[group_num]]
 # for i in range(len(curr_group)):
-#     if(math.isnan(curr_group[i]) == False):
-#         inertia_cost.at[i, inertia_cost.columns[group_num]] = inertia_cost.at[i, inertia_cost.columns[group_num]]/float(max(curr_group))
+#     if(math.isnan(curr_group[i]) is False):
+#         inertia_cost.at[i,
+#                         inertia_cost.columns[group_num]] = inertia_cost.at[i,
+#                                                                            inertia_cost.columns[group_num]]/float(
+#                                                                                max(curr_group))
 # ax_COST = sns.lineplot(x = 'K', y = 'Normalized Inertia (Cost)', data = inertia_cost)
 # ax_COST.set_title('Optimize k-value in Clustering')
 # ax_COST.set_xticks(range(1, K_MAX + 1))
@@ -69,7 +83,8 @@
 # # Plotting all the inverse transformed points in sRGB Space
 # fig1 = plt.figure(figsize = (GLOBAL_FIG_SIZE, GLOBAL_FIG_SIZE))
 # ax_RGB_inverse_transform = fig1.add_subplot(111, projection = '3d')
-# ax_RGB_inverse_transform.set_title('sRGB-PCA-sRGB Inverse Transformed Points in sRGB Space w/ Clustering and Palette Connections')
+# ax_RGB_inverse_transform.set_title('sRGB-PCA-sRGB Inverse Transformed Points in sRGB Space' +
+#                                    ' w/ Clustering and Palette Connections')
 # ax_RGB_inverse_transform.set_xlabel('R')
 # ax_RGB_inverse_transform.set_ylabel('G')
 # ax_RGB_inverse_transform.set_zlabel('B')
@@ -77,7 +92,8 @@
 #             c = df_RGB_pca_sRGB['Category'], cmap = 'viridis',
 #             edgecolor = 'k', s = 60, alpha = 0.5)
 # # Plotting all the inverse transormed cluster centroids in sRGB Space
-# ax_RGB_inverse_transform.scatter(df_RGB_CENT['R'], df_RGB_CENT['G'], df_RGB_CENT['B'], s = 300, c = 'r', marker = '*', label = 'Centroid')
+# ax_RGB_inverse_transform.scatter(df_RGB_CENT['R'], df_RGB_CENT['G'], df_RGB_CENT['B'],
+#                                  s = 300, c = 'r', marker = '*', label = 'Centroid')
 # # Connect the points in each palette in sRGB Space
 # c = 0 # For color formatting, and *connection limit
 # for palette_colors in RGB_values:
@@ -106,7 +122,8 @@
 # # Connect the associated centroid of the points in each palette in sRGB Space
 # fig_centr = plt.figure(figsize = (GLOBAL_FIG_SIZE, GLOBAL_FIG_SIZE))
 # ax_RGB_inverse_transform_CENTROID_PLOTS = fig_centr.add_subplot(111, projection = '3d')
-# ax_RGB_inverse_transform_CENTROID_PLOTS.set_title('sRGB-PCA-sRGB Inverse Transformed Points in sRGB Space w/ Clustering and Centroid Palette Connections')
+# ax_RGB_inverse_transform_CENTROID_PLOTS.set_title('sRGB-PCA-sRGB Inverse Transformed Points ' +
+#                                                   ' in sRGB Space w/ Clustering and Centroid Palette Connections')
 # ax_RGB_inverse_transform_CENTROID_PLOTS.set_xlabel('R')
 # ax_RGB_inverse_transform_CENTROID_PLOTS.set_ylabel('G')
 # ax_RGB_inverse_transform_CENTROID_PLOTS.set_zlabel('B')
@@ -114,21 +131,30 @@
 #             c = df_RGB_pca_sRGB['Category'], cmap = 'viridis',
 #             edgecolor = 'k', s = 60, alpha = 0.5)
 
-# Next two operations (point scatter, centroid plot) are also performed on ax_sRGB_to_sRGB object to reflect centroid calculations visually
+# Next two operations (point scatter, centroid plot) are also performed on
+#  ax_sRGB_to_sRGB object to reflect centroid calculations visually
 # Plotting all the inverse transormed cluster centroids in sRGB Space
-# ax_RGB_inverse_transform_CENTROID_PLOTS.scatter(df_RGB_pca_sRGB_CENT['R'], df_RGB_pca_sRGB_CENT['G'], df_RGB_pca_sRGB_CENT['B'], s = 300, c = 'r', marker = '*', label = 'Centroid')
-# ax_sRGB_to_sRGB.scatter(df_RGB_pca_sRGB_CENT['R'], df_RGB_pca_sRGB_CENT['G'], df_RGB_pca_sRGB_CENT['B'], s = 300, c = 'r', marker = '*', label = 'Centroid')
+# ax_RGB_inverse_transform_CENTROID_PLOTS.scatter(df_RGB_pca_sRGB_CENT['R'], df_RGB_pca_sRGB_CENT['G'],
+#                                                 df_RGB_pca_sRGB_CENT['B'], s = 300, c = 'r', marker = '*',
+#                                                 label = 'Centroid')
+# ax_sRGB_to_sRGB.scatter(df_RGB_pca_sRGB_CENT['R'], df_RGB_pca_sRGB_CENT['G'], df_RGB_pca_sRGB_CENT['B'],
+#                         s = 300, c = 'r', marker = '*', label = 'Centroid')
 # Connect the points in each palette in sRGB Space (based on respective centroids)
 # c = 0 # For color formatting, and *connection limit
 # for palette_colors in RGB_values:
-#     loc = [[color_location(df_RGB_pca_sRGB, tuple([[i * 255.0 for i in color][0], [i * 255.0 for i in color][1], [i * 255.0 for i in color][2]]))] for color in palette_colors]
+#     loc = [[color_location(df_RGB_pca_sRGB, tuple([[i * 255.0 for i in color][0],
+#                                                    [i * 255.0 for i in color][1],
+#                                                    [i * 255.0 for i in color][2]]))] for color in palette_colors]
 #     loc = list(chain.from_iterable(loc))
-#     CENT_points = [list(chain.from_iterable(df_RGB_pca_sRGB_CENT.iloc[[loc_i]].to_numpy().tolist())) for loc_i in loc]
+#     CENT_points = [list(chain.from_iterable(df_RGB_pca_sRGB_CENT.iloc[[loc_i]].to_numpy().tolist()))
+#                    for loc_i in loc]
 #     CENT_points_x = [val[0] for val in CENT_points]
 #     CENT_points_y = [val[1] for val in CENT_points]
 #     CENT_points_z = [val[2] for val in CENT_points]
-#     [ax_RGB_inverse_transform_CENTROID_PLOTS.plot(CENT_points_x, CENT_points_y, CENT_points_z, color = distinct_colors[c % len(distinct_colors)])]
-#      ax_sRGB_to_sRGB.plot(CENT_points_x, CENT_points_y, CENT_points_z, color = distinct_colors[c % len(distinct_colors)])
+#     [ax_RGB_inverse_transform_CENTROID_PLOTS.plot(CENT_points_x, CENT_points_y, CENT_points_z,
+#                                                  color = distinct_colors[c % len(distinct_colors)])]
+#     ax_sRGB_to_sRGB.plot(CENT_points_x, CENT_points_y, CENT_points_z,
+#                          color = distinct_colors[c % len(distinct_colors)])
 #     c += 1
 ############################################################
 ############################################################

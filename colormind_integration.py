@@ -1,14 +1,27 @@
-import requests
-from itertools import chain
-import seaborn as sns
-import colormap
+# @Author: Shounak Ray <Ray>
+# @Date:   26-Aug-2020 13:08:90:901  GMT-0600
+# @Email:  rijshouray@gmail.com
+# @Filename: colormind_integration.py
+# @Last modified by:   Ray
+# @Last modified time: 24-Feb-2021 01:02:51:515  GMT-0700
+# @License: [Private IP]
+
+
 import ast
+from itertools import chain
+
+import colormap
+import requests
+import seaborn as sns
 
 # Display palette from given RGB List
+
+
 def display_palette_from_RGB(RGB_colors):
     HEX_list = [colormap.rgb2hex(color[0], color[1], color[2]) for color in RGB_colors]
     sns.set_palette(HEX_list)
     sns.palplot(sns.color_palette())
+
 
 all_sets = []
 existing_palette = ''

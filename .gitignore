@@ -1,3 +1,6 @@
+# Ignore videos
+**/*.mp4
+
 # System Files
 .DS_Store
 
